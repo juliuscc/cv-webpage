@@ -2,9 +2,9 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  body {
-	  margin: 0;
-  }
+	body {
+		margin: 0;
+	}
 `
 
 export default class MyDocument extends Document {
