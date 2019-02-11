@@ -8,25 +8,25 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export default class MyDocument extends Document {
-    static getInitialProps({ renderPage }) {
-        const sheet = new ServerStyleSheet()
-        const page = renderPage(App => props =>
-            sheet.collectStyles(<App {...props} />)
-        )
-        const styleTags = sheet.getStyleElement()
-        return { ...page, styleTags }
-    }
+	static getInitialProps({ renderPage }) {
+		const sheet = new ServerStyleSheet()
+		const page = renderPage(App => props =>
+			sheet.collectStyles(<App {...props} />)
+		)
+		const styleTags = sheet.getStyleElement()
+		return { ...page, styleTags }
+	}
 
-    render() {
-        return (
-            <html>
-                <Head>{this.props.styleTags}</Head>
-                <body>
-                    <GlobalStyle />
-                    <Main />
-                    <NextScript />
-                </body>
-            </html>
-        )
-    }
+	render() {
+		return (
+			<html>
+				<Head>{this.props.styleTags}</Head>
+				<body>
+					<GlobalStyle />
+					<Main />
+					<NextScript />
+				</body>
+			</html>
+		)
+	}
 }

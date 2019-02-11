@@ -29,6 +29,7 @@
     },
     "prettier": {
         "semi": false,
+        "useTabs": true,
         "singleQuote": true,
         "tabWidth": 4
     }

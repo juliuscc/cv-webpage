@@ -4,14 +4,14 @@ import ProfileCard from '../components/ProfileCard'
 import styled from 'styled-components'
 
 class index extends Component {
-    render() {
-        return (
-            <>
-                <HeaderBackground />
-                <ProfileCard />
-            </>
-        )
-    }
+	render() {
+		return (
+			<>
+				<HeaderBackground />
+				<ProfileCard />
+			</>
+		)
+	}
 }
 
 export default index
