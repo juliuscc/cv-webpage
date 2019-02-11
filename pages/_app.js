@@ -1,7 +1,7 @@
 import App, { Container } from 'next/app'
 import Page from '../components/Page'
 
-class MyApp extends App {
+export default class MyApp extends App {
 	static async getInitialProps({ Component, ctx }) {
 		let pageProps = {}
 
@@ -24,5 +24,3 @@ class MyApp extends App {
 		)
 	}
 }
-
-export default MyApp
