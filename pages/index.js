@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import Container from '../components/styles/Container'
+import SectionTitle from '../components/styles/SectionTitle'
 
-class index extends Component {
-	render() {
-		return (
-			<>
-				<h2>Lorem!</h2>
-			</>
-		)
-	}
-}
+const index = () => (
+	<Container>
+		<SectionTitle>Experiences</SectionTitle>
+	</Container>
+)
 
 export default index

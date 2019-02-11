@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const WrapperCard = styled.div`
 	margin: 0 auto;
 	margin-top: -100px;
+	margin-bottom: 50px;
 	padding: 20px;
 	width: 600px;
 	display: flex;
@@ -19,9 +20,6 @@ const ProfileImage = styled.img`
 `
 
 const ProfileText = styled.div`
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 	h1 {
 		margin: 0;
 	}
