@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
-
-const ImageCard = () => <div />
+import HeaderBackground from '../components/HeaderBackground'
+import ProfileCard from '../components/ProfileCard'
+import styled from 'styled-components'
 
 class index extends Component {
-	render() {
-		return (
-			<>
-				<header />
-				<ImageCard />
-			</>
-		)
-	}
+    render() {
+        return (
+            <>
+                <HeaderBackground />
+                <ProfileCard />
+            </>
+        )
+    }
 }
 
 export default index
