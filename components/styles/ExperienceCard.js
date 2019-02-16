@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Card = styled.div`
-	background-color: ${props => props.theme.white};
+	background-color: ${props => props.theme.colors.white};
 	border-radius: 5px;
 	padding: 20px 30px;
 	margin-bottom: 20px;

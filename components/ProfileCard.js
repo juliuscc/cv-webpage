@@ -7,7 +7,7 @@ const WrapperCard = styled.div`
 	padding: 20px;
 	width: 600px;
 	display: flex;
-	background-color: ${props => props.theme.white};
+	background-color: ${props => props.theme.colors.white};
 	box-shadow: rgba(0, 0, 0, 0.75) 0px -3px 60px -15px;
 
 	div {

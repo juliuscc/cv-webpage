@@ -1,24 +1,60 @@
 import React, { Component } from 'react'
-import Container from '../components/styles/Container'
-
 import styled from 'styled-components'
+import Container from '../components/styles/Container'
+import { Experiences as ExperienceList } from '../components/Experiences'
 
-const SectionTitle = styled.h2`
-	font-size: 30px;
-	color: ${props => props.theme.white};
-	border-bottom: solid 5px;
-	line-height: 1.3;
-`
+const NavBar = styled.nav`
+	background-color: ${props => props.theme.colors.white};
+	color: ${props => props.theme.colors.primary};
 
-const TitleBar = styled.div`
-	display: flex;
+	ul {
+		display: flex;
+		list-style: none;
+		flex-flow: row wrap;
+		justify-content: center;
+		padding: 0;
 
-	h2 {
-		flex: 1;
+		li {
+			display: block;
+			flex: 1;
+			position: relative;
+		}
 	}
 `
 
-import { Experiences as ExperienceList } from '../components/Experiences'
+const SectionTitle = styled.li`
+	padding: 20px 10px;
+	font-size: 30px;
+	color: ${props =>
+		props.active
+			? props.theme.colors.secondary
+			: props.theme.colors.primary};
+	line-height: 1.3;
+	cursor: pointer;
+	position: relative;
+
+	a {
+		display: block;
+		transition: transform 0.3s;
+		${props => props.active && 'transform: translateY(4px);'}
+	}
+
+	&:last-child::before {
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: ${props => props.theme.colors.secondary};
+		content: '';
+		transition: transform 0.3s;
+
+		transform: translateX(
+			-${props => props.numberOfTabs - props.activeIndex - 1}00%
+		);
+	}
+`
+
 class index extends Component {
 	state = {
 		selectedSection: 0,
@@ -60,18 +96,31 @@ class index extends Component {
 					}
 				]
 			},
-			{ title: 'Education', items: [] }
+			{ title: 'Education', items: [] },
+			{ title: 'Projects', items: [] }
 		]
 	}
 
 	render() {
 		return (
 			<Container>
-				<TitleBar>
-					{this.state.sections.map(({ title }) => (
-						<SectionTitle>{title}</SectionTitle>
-					))}
-				</TitleBar>
+				<NavBar>
+					<ul>
+						{this.state.sections.map(({ title }, i) => (
+							<SectionTitle
+								key={i}
+								active={this.state.selectedSection === i}
+								activeIndex={this.state.selectedSection}
+								numberOfTabs={this.state.sections.length}
+								onClick={() =>
+									this.setState({ selectedSection: i })
+								}
+							>
+								<a>{title}</a>
+							</SectionTitle>
+						))}
+					</ul>
+				</NavBar>
 				<ExperienceList
 					items={
 						this.state.sections[this.state.selectedSection].items
