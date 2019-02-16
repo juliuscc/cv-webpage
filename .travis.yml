@@ -11,6 +11,7 @@ notifications:
 script:
     - npm run ci-build
     - echo "juliuscc.se" > out/CNAME
+    - touch out/.nojekyll
 
 deploy:
     provider: pages
