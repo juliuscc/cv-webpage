@@ -2,7 +2,9 @@ import { ThemeProvider } from 'styled-components'
 import Meta from '../components/Meta'
 import Header from '../components/Header'
 
-const theme = {}
+const theme = {
+	white: '#eee'
+}
 
 const Page = props => (
 	<ThemeProvider theme={theme}>
