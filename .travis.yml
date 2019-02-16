@@ -1,0 +1,25 @@
+language: node_js
+cache:
+    directories:
+        - ~/.npm
+notifications:
+    email: false
+
+script:
+    - npm run ci-build
+    - echo "juliuscc.se" > out/CNAME
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    on:
+        branch: master
+
+after_deploy:
+    - |
+        curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${CF_ZONE_ID}/purge_cache" \
+          -H "X-Auth-Email: ${CF_EMAIL}" \
+          -H "X-Auth-Key: ${CF_API_KEY}" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'
