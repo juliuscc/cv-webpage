@@ -32,5 +32,18 @@
 		"useTabs": true,
 		"singleQuote": true,
 		"tabWidth": 4
+	},
+	"babel": {
+		"presets": [
+			"next/babel"
+		],
+		"plugins": [
+			[
+				"styled-components",
+				{
+					"ssr": true
+				}
+			]
+		]
 	}
 }
