@@ -68,8 +68,9 @@ class index extends Component {
 		return (
 			<Container>
 				<TitleBar>
-					<SectionTitle>Experiences</SectionTitle>
-					<SectionTitle>Experiences</SectionTitle>
+					{this.state.sections.map(({ title }) => (
+						<SectionTitle>{title}</SectionTitle>
+					))}
 				</TitleBar>
 				<ExperienceList
 					items={
