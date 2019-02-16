@@ -32,6 +32,23 @@
 			}
 		]
 	},
-	{ "title": "Education", "items": [] },
+	{
+		"title": "Education",
+		"items": [
+			{
+				"title": "Degree Program Information and Communication Technology",
+				"company": "Kungliga Tekniska Högskolan (KTH)",
+				"description": "BSc: Information and Communication Technology\nMSc: Software Engineering of Distributed Systems",
+				"start": "2015",
+				"end": "2020"
+			},
+			{
+				"title": "Secondary School",
+				"company": "Stockholms Tekniska Gymnasium",
+				"start": "2012",
+				"end": "2015"
+			}
+		]
+	},
 	{ "title": "Projects", "items": [] }
 ]

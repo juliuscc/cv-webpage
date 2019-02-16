@@ -4,7 +4,7 @@ import Header from '../components/Header'
 
 const theme = {
 	colors: {
-		white: '#eee',
+		white: '#fff',
 		primary: '#67a2ce',
 		secondary: '#edc98a'
 	}

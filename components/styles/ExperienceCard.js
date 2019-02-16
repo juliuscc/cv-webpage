@@ -22,7 +22,10 @@ const Date = styled.div`
 
 const Description = styled.p`
 	margin: 0;
-	margin-top: 10px;
+
+	&:first-of-type {
+		margin-top: 10px;
+	}
 `
 
 export const ExperienceCard = ({ title, company, description, start, end }) => (
@@ -33,8 +36,9 @@ export const ExperienceCard = ({ title, company, description, start, end }) => (
 			{start}
 			{` - ${end ? end : 'Present'}`}
 		</Date>
-		{description.split('\n').map((line, i) => (
-			<Description key={i}>{line}</Description>
-		))}
+		{description &&
+			description
+				.split('\n')
+				.map((line, i) => <Description key={i}>{line}</Description>)}
 	</Card>
 )

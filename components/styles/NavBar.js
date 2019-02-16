@@ -12,6 +12,7 @@ export const NavBar = styled.nav`
 		padding: 0;
 
 		li {
+			text-align: center;
 			display: block;
 			flex: 1;
 			position: relative;

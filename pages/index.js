@@ -5,12 +5,6 @@ import { NavBar, SectionTitle } from '../components/styles/NavBar'
 import data from '../data/data'
 
 class index extends Component {
-	constructor(props) {
-		super(props)
-
-		console.log(data)
-	}
-
 	state = {
 		selectedSection: 0,
 		sections: data
@@ -41,7 +35,6 @@ class index extends Component {
 						this.state.sections[this.state.selectedSection].items
 					}
 				/>
-				<div style={{ height: '100px' }} />
 			</Container>
 		)
 	}
