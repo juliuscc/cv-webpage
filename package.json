@@ -1,7 +1,7 @@
 {
 	"name": "cv-webpage",
 	"scripts": {
-		"dev": "next",
+		"start": "next",
 		"build": "next build && next export",
 		"export": "next export"
 	},
