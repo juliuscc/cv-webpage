@@ -1,5 +1,14 @@
 import App, { Container } from 'next/app'
 import Page from '../components/Page'
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+	body {
+		margin: 0;
+		background-color: #67a2ce;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+`
 
 export default class MyApp extends App {
 	static async getInitialProps({ Component, ctx }) {
@@ -18,6 +27,7 @@ export default class MyApp extends App {
 		return (
 			<Container>
 				<Page>
+					<GlobalStyle />
 					<Component {...pageProps} />
 				</Page>
 			</Container>
